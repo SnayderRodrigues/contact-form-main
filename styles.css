@@ -14,6 +14,24 @@
   margin: 0;
 }
 
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  border: 0;
+  cursor: pointer;
+}
+
+input, textarea {
+  padding: 1rem;
+  border: 1px solid var(--dark-gray);
+  border-radius: 0.5rem;
+}
+
 body {
   font-family: "Karla", sans-serif;
   font-size: 16px;
@@ -48,13 +66,13 @@ body {
 
 .form > h1 {
   grid-column: 1 / -1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .form > div {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .form > div:nth-of-type(1), .form > div:nth-of-type(2) {
@@ -78,13 +96,17 @@ body {
 
 .form > div:nth-of-type(4) > div {
   grid-column: span 1;
-  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
   border: 1px solid var(--dark-gray);
   border-radius: 0.5rem;
 }
 
 .form > div:nth-of-type(5) {
   grid-column: 1 / -1;
+  margin-bottom: 1rem;
 }
 
 .form > div:nth-of-type(6) {
@@ -93,8 +115,13 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  margin-bottom: 1rem;
 }
 
 .form > button {
   grid-column: 1 / -1;
+  color: var(--white);
+  background-color: var(--green);
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
